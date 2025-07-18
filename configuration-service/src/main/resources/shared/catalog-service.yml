@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: catalog-service
+
+catalog-path:
+  /csv/jcpenney_com-ecommerce_sample.csv
+
+server:
+  port:
+    8082
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
