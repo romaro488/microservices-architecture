@@ -67,9 +67,9 @@ public class ProductService {
     }
 
 
-    public Map<String, Boolean> fallbackLoadInventory(List<String> ids, Throwable throwable) {
+    public List<Product> fallbackLoadInventory(String ids, Throwable throwable) {
         log.error("Could not retrieve inventory. ids={} exception={}", ids, throwable.getMessage());
-        return Map.of("123", false);
+        return List.of(Product.builder().uniqId("Cashed product id for sku").sku("Cashed product sku").build());
     }
 
     private static void throwErrorIfEmpty(RuntimeException exception) {
