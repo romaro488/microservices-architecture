@@ -7,11 +7,13 @@ spring:
       routes:
         - id: product-service
           uri: lb://product-service
-          
+          predicates:
+            - Path=/api/**
 eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+
 server:
   port:
     8084

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.util.List;
 
-@FeignClient(name = "CATALOG-SERVICE")
+@FeignClient(name = "catalog-service")
 public interface CatalogClient {
 
     @GetMapping("/product/{id}")

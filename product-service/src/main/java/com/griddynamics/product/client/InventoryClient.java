@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import java.util.List;
 import java.util.Map;
 
-@FeignClient(value = "INVENTORY-SERVICE")
+@FeignClient(value = "inventory-service")
 public interface InventoryClient {
 
     @GetMapping("available/{ids}")
